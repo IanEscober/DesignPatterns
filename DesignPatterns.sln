@@ -37,7 +37,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pipeline", "src\Pipeline\Pi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Command", "src\Command\Command.csproj", "{D02D6E75-ED54-449F-B571-05D4602812BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Iterator", "src\Iterator\Iterator.csproj", "{4717C271-1443-4A5B-87F6-191E40AD46E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Iterator", "src\Iterator\Iterator.csproj", "{4717C271-1443-4A5B-87F6-191E40AD46E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Memento", "src\Memento\Memento.csproj", "{FC6B4F05-6246-4169-A355-EA7E60B66D8F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -105,6 +107,10 @@ Global
 		{4717C271-1443-4A5B-87F6-191E40AD46E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4717C271-1443-4A5B-87F6-191E40AD46E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4717C271-1443-4A5B-87F6-191E40AD46E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC6B4F05-6246-4169-A355-EA7E60B66D8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC6B4F05-6246-4169-A355-EA7E60B66D8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC6B4F05-6246-4169-A355-EA7E60B66D8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC6B4F05-6246-4169-A355-EA7E60B66D8F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -125,6 +131,7 @@ Global
 		{2E26680F-85F6-4CED-B963-1117D7BBDD9B} = {4DFE5E6C-CD5E-4A0F-BD80-E5BE0E664371}
 		{D02D6E75-ED54-449F-B571-05D4602812BF} = {4DFE5E6C-CD5E-4A0F-BD80-E5BE0E664371}
 		{4717C271-1443-4A5B-87F6-191E40AD46E2} = {4DFE5E6C-CD5E-4A0F-BD80-E5BE0E664371}
+		{FC6B4F05-6246-4169-A355-EA7E60B66D8F} = {4DFE5E6C-CD5E-4A0F-BD80-E5BE0E664371}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {24D5D21E-EFCF-4D5C-A373-D41B0CE4F0AA}
