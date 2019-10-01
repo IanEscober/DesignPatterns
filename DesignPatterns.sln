@@ -43,7 +43,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Memento", "src\Memento\Meme
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Observer", "src\Observer\Observer.csproj", "{96ABE338-4B18-494F-BF62-9950F8096066}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "State", "src\State\State.csproj", "{AC948FA5-2058-45EC-BACA-67A115CFAA75}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "State", "src\State\State.csproj", "{AC948FA5-2058-45EC-BACA-67A115CFAA75}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Strategy", "src\Strategy\Strategy.csproj", "{13094203-42FF-42E1-AA3F-37AF5E269FD3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -123,6 +125,10 @@ Global
 		{AC948FA5-2058-45EC-BACA-67A115CFAA75}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC948FA5-2058-45EC-BACA-67A115CFAA75}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC948FA5-2058-45EC-BACA-67A115CFAA75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13094203-42FF-42E1-AA3F-37AF5E269FD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13094203-42FF-42E1-AA3F-37AF5E269FD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13094203-42FF-42E1-AA3F-37AF5E269FD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13094203-42FF-42E1-AA3F-37AF5E269FD3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -146,6 +152,7 @@ Global
 		{FC6B4F05-6246-4169-A355-EA7E60B66D8F} = {4DFE5E6C-CD5E-4A0F-BD80-E5BE0E664371}
 		{96ABE338-4B18-494F-BF62-9950F8096066} = {4DFE5E6C-CD5E-4A0F-BD80-E5BE0E664371}
 		{AC948FA5-2058-45EC-BACA-67A115CFAA75} = {4DFE5E6C-CD5E-4A0F-BD80-E5BE0E664371}
+		{13094203-42FF-42E1-AA3F-37AF5E269FD3} = {4DFE5E6C-CD5E-4A0F-BD80-E5BE0E664371}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {24D5D21E-EFCF-4D5C-A373-D41B0CE4F0AA}
