@@ -1,21 +1,56 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
-using Mediator.Colleagues;
-
-namespace Mediator.Mediators
+﻿namespace Mediator.Mediators
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Threading.Tasks;
+    using Mediator.Colleagues.Internal;
+    using Mediator.Models;
+
     public class CqrsMediator : IMediator
     {
-        public Task BroadcastAsync<T>(IPayload<T> payload)
+        private readonly IEnumerable<HandlerWrapper> handlers;
+
+        public CqrsMediator(IEnumerable<HandlerWrapper> handlers)
         {
-            throw new NotImplementedException();
+            this.handlers = handlers;
         }
 
-        public Task<T> SendAsync<T>(IPayload<T> payload)
+        public Task BroadcastAsync(IPayload payload)
         {
-            throw new NotImplementedException();
+            var tasks = new List<Task>();
+
+            foreach (var handler in this.handlers)
+            {
+                if (this.MatchHandlerWithPayload(handler, payload))
+                {
+                    tasks.Add(handler.HandleAsync(payload));
+                }
+            }
+
+            if (tasks.Any())
+            {
+                return Task.WhenAll(tasks);
+            }
+
+            return Task.CompletedTask;
+        }
+
+        public Task SendAsync(IPayload payload)
+        {
+            var handler = this.handlers.Single(h => this.MatchHandlerWithPayload(h, payload));
+            return handler.HandleAsync(payload);
+        }
+
+        private bool MatchHandlerWithPayload(HandlerWrapper handler, IPayload payload)
+        {
+            return this.GetPayloadType(handler) == payload.GetType();
+        }
+
+        private Type GetPayloadType(HandlerWrapper handler)
+        {
+            return handler.GetType()
+                .GenericTypeArguments[0];
         }
     }
 }
